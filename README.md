@@ -1,4 +1,4 @@
-# 🧠 MeetingMind AI — Intelligent Meeting Intelligence Dashboard
+#  MeetingMind AI — Intelligent Meeting Intelligence Dashboard
 
 [![Python Version](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
 [![Streamlit App](https://img.shields.io/badge/Streamlit-1.58.0-FF4B4B.svg)](https://streamlit.io/)
@@ -10,13 +10,13 @@ An intelligent, production-grade meeting analytics dashboard that extracts struc
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 MeetingMind AI solves the problem of information overload from corporate and sprint meetings. By importing standard meeting transcripts, it instantly compiles executive summaries, action items (with owners and deadlines), and risk reports in a single dashboard. Users can converse naturally with the meeting contents, retrieving exact statements and decisions with citation markers highlighting the origin of each answer.
 
 ---
 
-## 🛠️ System Architecture
+##  System Architecture
 
 Below is the conceptual flow of the MeetingMind AI pipeline, tracing how transcripts are processed, cached, embedded, and queried.
 
@@ -91,18 +91,18 @@ Below is the conceptual flow of the MeetingMind AI pipeline, tracing how transcr
 
 ---
 
-## ✨ Features
+##  Features
 
-- **🚀 Live Ingestion Loader**: A multi-step visual status tracker (`st.status`) providing transparency as transcripts load, split, embed, store, and analyze.
-- **📊 Auto-Generated Executive Insights**: Compiles meeting topics, participants, action items, deadlines, decisions, and risks in expandable UI cards.
-- **💾 Disk Cache Optimization**: Insights are stored locally as JSON. Re-uploading or viewing the same meeting loads instantly, avoiding repeated API costs.
-- **🛡️ Duplicate Detection**: Automatically prevents re-embedding the same transcript twice, protecting the vector database from redundant records.
-- **💬 Structured RAG Chat**: Chat with meetings using context-grounded prompts that format output points (e.g. `• Owner — Task — Deadline`) and append source citations (`✓ Chunk X`).
-- **🛡️ Resilient Exception Mapping**: Catch-all boundary maps API rate limits, invalid credentials, and offline states to helpful, markdown-styled troubleshooting steps.
+- ** Live Ingestion Loader**: A multi-step visual status tracker (`st.status`) providing transparency as transcripts load, split, embed, store, and analyze.
+- ** Auto-Generated Executive Insights**: Compiles meeting topics, participants, action items, deadlines, decisions, and risks in expandable UI cards.
+- ** Disk Cache Optimization**: Insights are stored locally as JSON. Re-uploading or viewing the same meeting loads instantly, avoiding repeated API costs.
+- ** Duplicate Detection**: Automatically prevents re-embedding the same transcript twice, protecting the vector database from redundant records.
+- ** Structured RAG Chat**: Chat with meetings using context-grounded prompts that format output points (e.g. `• Owner — Task — Deadline`) and append source citations (`✓ Chunk X`).
+- ** Resilient Exception Mapping**: Catch-all boundary maps API rate limits, invalid credentials, and offline states to helpful, markdown-styled troubleshooting steps.
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
 MeetingMind/
@@ -139,7 +139,7 @@ MeetingMind/
 
 ---
 
-## ⚡ Tech Stack
+##  Tech Stack
 
 - **Front-end / Dashboard**: [Streamlit](https://streamlit.io/) (v1.58.0)
 - **Orchestration**: [LangChain](https://github.com/langchain-ai/langchain) (v1.3.11)
@@ -150,7 +150,7 @@ MeetingMind/
 
 ---
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### 1. Prerequisites
 Ensure you have Python 3.12 installed on your system.
@@ -189,7 +189,7 @@ GROQ_API_KEY=gsk_your_actual_key_here
 
 ---
 
-## 🛠️ Usage
+##  Usage
 
 ### Running the Streamlit Dashboard
 ```bash
@@ -212,7 +212,7 @@ python ingest.py
 
 ---
 
-## 🧠 Retrieval-Augmented Generation (RAG) Pipeline
+##  Retrieval-Augmented Generation (RAG) Pipeline
 
 1. **Ingest & Clean**: Raw transcripts are loaded and standardized.
 2. **Chunking**: Text is split using LangChain's `RecursiveCharacterTextSplitter` with a chunk size of 800 characters and 100 character overlap to maintain speaker continuity.
@@ -223,19 +223,17 @@ python ingest.py
 
 ---
 
-## 🌟 Future Improvements
+##  Future Improvements
 - **PDF & DOCX Support**: Expand `services/loader.py` to process additional meeting record formats.
 - **Multi-Meeting Context**: Enable cross-meeting query scopes to compare timeline changes over time.
 - **Audio Processing**: Integrate OpenAI Whisper to accept recorded MP3/WAV files directly.
 
 ---
 
-## 📄 License
+##  License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👤 Author
+##  Author
 **Hemang Kalavadiya**
-- GitHub: [@HemangKalavadiya](https://github.com/HemangKalavadiya)
-- LinkedIn: [Your Profile](https://linkedin.com)
